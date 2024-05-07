@@ -1,0 +1,33 @@
+{
+  "name": "daviswwang/laravelhelper",
+  "description": "laravel helper sdk",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "daviswwang",
+      "email": "130086230@qq.com",
+      "homepage": "https://github.com/daviswwang/laravelhelper"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Daviswwang\\LaravelHelper\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.3",
+    "illuminate/support": "^6|^7|^8|^9|^10|^11",
+    "illuminate/http": "^6|^7|^8|^9|^10|^11"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Daviswwang\\LaravelHelper\\LaravelServiceProvider"
+      ]
+    },
+    "aliases": {
+      "LaravelHelper": "Daviswwang\\LaravelHelper\\Facades\\LaravelHelper"
+    }
+
+  }
+}
