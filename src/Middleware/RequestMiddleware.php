@@ -13,6 +13,10 @@ class RequestMiddleware
             return !is_null($value) && $value !== '';
         }));
 
+        app()->bind('limit', function () use ($request) {
+            return $request->input('limit', 15);
+        });
+        
         return $next($request);
     }
 }

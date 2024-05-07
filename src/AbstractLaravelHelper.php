@@ -6,7 +6,7 @@ use Illuminate\Contracts\Config\Repository;
 use Psr\Container\ContainerInterface;
 
 
-abstract class AbstractHelper implements LaravelHelperInterface
+abstract class AbstractLaravelHelper implements LaravelHelperInterface
 {
     private $symmetryAlgs = [
         'HS256',
