@@ -13,22 +13,22 @@ class LaravelServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->singleton(JWT::class, function ($app) {
-            return new JWT($app, (new BlackList($app)));
+        $this->app->singleton(LaravelHelper::class, function ($app) {
+            return new LaravelHelper($app);
         });
-        $this->app->alias(JWT::class, 'jwt');
+        $this->app->alias(LaravelHelper::class, 'laravelhelper');
     }
 
     public function provides()
     {
-        return [LaravelOSS::class, 'laraveloss'];
+        return [LaravelHelper::class, 'laravelhelper'];
     }
 
     public function boot()
     {
-        $path = realpath(__DIR__ . '/Config/AliConfig.php');
-        $this->publishes([$path => config_path('oss.php')], 'config');
-        $this->mergeConfigFrom($path, 'laraveloss');
+        $path = realpath(__DIR__ . '/Config/HelperConfig.php');
+        $this->publishes([$path => config_path('helper.php')], 'config');
+        $this->mergeConfigFrom($path, 'laravelhelper');
     }
 
 

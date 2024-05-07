@@ -23,10 +23,10 @@ class ConfigProvider
             ],
 //            'publish' => [
 //                [
-//                    'id' => 'jwt',
-//                    'description' => 'jwt',
-//                    'source' => __DIR__ . '/../publish/jwt.php',
-//                    'destination' => BASE_PATH . '/config/autoload/jwt.php',
+//                    'id' => 'helper',
+//                    'description' => 'helper',
+//                    'source' => __DIR__ . '/../publish/helper.php',
+//                    'destination' => BASE_PATH . '/config/autoload/helper.php',
 //                ],
 //            ],
         ];

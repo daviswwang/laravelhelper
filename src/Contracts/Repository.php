@@ -1,6 +1,6 @@
 <?php
 
-namespace Daviswwang\LaravelHelper\Facades;
+namespace Daviswwang\LaravelHelper\Contracts;
 
 interface Repository
 {
