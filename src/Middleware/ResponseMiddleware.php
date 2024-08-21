@@ -18,7 +18,7 @@ class ResponseMiddleware
         // Perform action
         $res = $response->getOriginalContent();
 
-        if (!isset($res['code']) || !in_array($res['code'], [200, 404, 400, 401, 300])) {
+        if (!isset($res['code']) || !in_array($res['code'], [200, 404, 400, 401, 300, 40001, 40002, 40003, 40004])) {
             $res = [
                 'code' => 200,
                 'data' => $res,
